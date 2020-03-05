@@ -1,9 +1,10 @@
 import React from 'react'
-import { BrowserRouter as Router, Route } from "react-router-dom"
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
 import Nav from './components/nav'
 import Mine from './pages/Mine'
 import Home from './pages/Home'
 import UserCenter from './pages/UserCenter'
+import NotFound from './pages/NotFound'
 
 function App() {
   /**
@@ -13,9 +14,13 @@ function App() {
   return (
     <Router>
       <Nav />
-      <Route path="/" component={Home} exact></Route>
-      <Route path="/mine" component={Mine} exact strict></Route>
-      <Route path="/mine/usercenter" component={UserCenter}></Route>
+      <Switch>
+        <Route path="/" component={Home} exact></Route>
+        <Route path="/mine" component={Mine} exact strict></Route>
+        <Route path="/mine/usercenter" component={UserCenter}></Route>
+        <Route component={NotFound}></Route>
+      </Switch>
+      
     </Router>
   );
 }
