@@ -2,6 +2,7 @@ import React from 'react';
 import {Button} from 'antd';
 import { MessageOutlined } from '@ant-design/icons';
 import FetchDemo from './FetchDemo'
+import ProxyDemo from './ProxyDemo'
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Button type="danger">按钮</Button>
       <MessageOutlined style={{ fontSize: '16px', color: '#08c' }} />
       <FetchDemo />
+      <ProxyDemo />
     </div>
   );
 }
