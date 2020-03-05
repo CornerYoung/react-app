@@ -66,3 +66,23 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `yarn build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+
+### 开发环境下两种跨域解决方案：1.配置package.json；2.安装http-proxy-middleware
+```javascript
+
+"proxy": "http://localhost:3100" //请求的接口协议、域名、端口由proxy替代
+------------------------------------------
+//yarn add http-proxy-middleware
+const { createProxyMiddleware } = require('http-proxy-middleware');
+
+module.exports = function (app) {
+    app.use(
+        '/api',
+        createProxyMiddleware({
+            target: 'http://localhost:3100',
+            changeOrigin: true,
+        })
+    );
+};
+```
