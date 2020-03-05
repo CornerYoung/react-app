@@ -14,7 +14,7 @@ function App() {
     <Router>
       <Nav />
       <Route path="/" component={Home} exact></Route>
-      <Route path="/mine" component={Mine} exact></Route>
+      <Route path="/mine" component={Mine} exact strict></Route>
       <Route path="/mine/usercenter" component={UserCenter}></Route>
     </Router>
   );
