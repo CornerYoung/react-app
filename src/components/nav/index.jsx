@@ -5,10 +5,13 @@ export default function Nav() {
     return (
         <ul>
             <li>
-                <Link to="/home">Home页面</Link>
+                <Link to="/">Home页面</Link>
             </li>
             <li>
                 <Link to="/mine">Mine页面</Link>
+            </li>
+            <li>
+                <Link to="/mine/usercenter">UserCenter页面</Link>
             </li>
         </ul>
     )
