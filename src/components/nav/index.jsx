@@ -11,6 +11,12 @@ export default function Nav() {
                 <Link to="/mine">Mine页面</Link>
             </li>
             <li>
+                <Link to="/render">render页面</Link>
+            </li>
+            <li>
+                <Link to="/render2">render2页面</Link>
+            </li>
+            <li>
                 <Link to="/mine/usercenter">UserCenter页面</Link>
             </li>
         </ul>
