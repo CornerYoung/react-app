@@ -17,10 +17,10 @@ function App() {
       <Nav />
       <Switch>
         <Route path="/" component={Home} exact></Route>
-        <Route path="/mine" component={Mine} exact strict></Route>
-        <Route path="/mine/usercenter" component={UserCenter}></Route>
+        <Route path="/mine/:id/:name" component={Mine} exact strict></Route>
+        <Route path="/mine/usercenter/:id" component={UserCenter}></Route>
         <Route path="/render" render={() => <div>render</div>}></Route>
-        <Route path="/render2" render={(props) => <Render {...props} name="勒布朗"/>}></Route>
+        <Route path="/render2/:username?" render={(props) => <Render {...props} name="勒布朗"/>}></Route>
         <Route component={NotFound}></Route>
       </Switch>
       

@@ -8,7 +8,7 @@ export default function Nav() {
                 <Link to="/">Home页面</Link>
             </li>
             <li>
-                <Link to="/mine">Mine页面</Link>
+                <Link to="/mine/123456/Lee">Mine页面</Link>
             </li>
             <li>
                 <Link to="/render">render页面</Link>

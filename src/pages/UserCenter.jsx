@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function UserCenter() {
+export default function UserCenter(props) {
     return (
         <div>
-            UserCenter
+            UserCenterID : {props.match.params.id}
         </div>
     )
 }
