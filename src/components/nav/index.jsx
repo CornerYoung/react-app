@@ -36,6 +36,9 @@ export default function Nav() {
                     }}
                 >link页面</Link>
             </li>
+            <li>
+                <Link to="/book">book页面</Link>
+            </li>
         </ul>
     )
 }

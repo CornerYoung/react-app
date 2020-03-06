@@ -8,6 +8,9 @@ import NotFound from './pages/NotFound'
 import Render from './pages/Render'
 import LinkOfRouter from './pages/LinkOfRouter'
 import Shop from './pages/Shop'
+import Book from './pages/Book'
+import BookWeb from './pages/BookWeb'
+import BookJava from './pages/BookJava'
 
 function App() {
   /**
@@ -26,6 +29,13 @@ function App() {
         <Route path="/render" render={() => <div>render</div>}></Route>
         <Route path="/render2/:username?" render={(props) => <Render {...props} name="勒布朗"/>}></Route>
         <Route path="/shop" component={Shop}></Route>
+        {/* <Route path="/book" component={Book}></Route> */}
+        <Book>
+          <Switch>
+            <Route path="/book/web" component={BookWeb}></Route>
+            <Route path="/book/java" component={BookJava}></Route>
+          </Switch>
+        </Book>
         <Route component={NotFound}></Route>
       </Switch>
       
