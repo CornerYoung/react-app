@@ -6,6 +6,7 @@ import Home from './pages/Home'
 import UserCenter from './pages/UserCenter'
 import NotFound from './pages/NotFound'
 import Render from './pages/Render'
+import LinkOfRouter from './pages/LinkOfRouter'
 
 function App() {
   /**
@@ -19,6 +20,7 @@ function App() {
         <Route path="/" component={Home} exact></Route>
         <Route path="/mine/:id/:name" component={Mine} exact strict></Route>
         <Route path="/mine/usercenter/:id" component={UserCenter}></Route>
+        <Route path="/link" component={LinkOfRouter}></Route>
         <Route path="/render" render={() => <div>render</div>}></Route>
         <Route path="/render2/:username?" render={(props) => <Render {...props} name="勒布朗"/>}></Route>
         <Route component={NotFound}></Route>

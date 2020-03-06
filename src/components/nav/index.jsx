@@ -17,7 +17,21 @@ export default function Nav() {
                 <Link to="/render2">render2页面</Link>
             </li>
             <li>
-                <Link to="/mine/usercenter">UserCenter页面</Link>
+                <Link 
+                    to="/mine/usercenter"
+                >
+                    UserCenter页面
+                </Link>
+            </li>
+            <li>
+                <Link 
+                    to={{
+                        pathname:"/link",
+                        search: "?sort=name",
+                        hash: "#the-hash",
+                        state: { fromDashboard: true }
+                    }}
+                >link页面</Link>
             </li>
         </ul>
     )
