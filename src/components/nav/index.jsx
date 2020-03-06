@@ -17,6 +17,9 @@ export default function Nav() {
                 <Link to="/render2">render2页面</Link>
             </li>
             <li>
+                <Link to="/shop">shop页面</Link>
+            </li>
+            <li>
                 <Link 
                     to="/mine/usercenter"
                 >
