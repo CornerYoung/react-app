@@ -1,8 +1,18 @@
 import * as actions from '../constants'
+// export const increment = (num) => {
+//     return {
+//         type:actions.INCREMENT,
+//         num
+//     }
+// }
 export const increment = (num) => {
-    return {
-        type:actions.INCREMENT,
-        num
+    return dispatch => {
+        setTimeout(()=>{
+            dispatch({
+                type: actions.INCREMENT,
+                num
+            })
+        },1000)
     }
 }
 
