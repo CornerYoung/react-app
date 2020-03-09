@@ -1,12 +1,14 @@
 import * as actions from '../constants'
-export const increment = () => {
+export const increment = (num) => {
     return {
-        type:actions.INCREMENT
+        type:actions.INCREMENT,
+        num
     }
 }
 
-export const decrement = () => {
+export const decrement = (num) => {
     return {
-        type:actions.DECREMENT
+        type:actions.DECREMENT,
+        num
     }
 }

@@ -11,8 +11,8 @@ class App extends Component {
         <p className="text-center">
           {/* <button onClick={() => { increment() }} className="btn btn-info">increment</button>
           <button onClick={() => { decrement() }} className="btn btn-success">decrement</button> */}
-          <button onClick={() => { this.props.counterActions.increment() }} className="btn btn-info">increment</button>
-          <button onClick={() => { this.props.counterActions.decrement() }} className="btn btn-success">decrement</button>
+          <button onClick={() => { this.props.counterActions.increment(10) }} className="btn btn-info">increment</button>
+          <button onClick={() => { this.props.counterActions.decrement(5) }} className="btn btn-success">decrement</button>
         </p>
       </div>
     );
