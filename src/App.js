@@ -9,8 +9,6 @@ class App extends Component {
       <div className="container">
         <h1 className="jumbotron-heading text-center">{this.props.counter}</h1>
         <p className="text-center">
-          {/* <button onClick={() => { increment() }} className="btn btn-info">increment</button>
-          <button onClick={() => { decrement() }} className="btn btn-success">decrement</button> */}
           <button onClick={() => { this.props.counterActions.increment(10) }} className="btn btn-info">increment</button>
           <button onClick={() => { this.props.counterActions.decrement(5) }} className="btn btn-success">decrement</button>
         </p>
@@ -21,7 +19,7 @@ class App extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    counter:state
+    counter:state.counter
   }
 }
 
