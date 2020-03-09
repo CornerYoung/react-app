@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import {connect} from 'react-redux'
 import * as counterActions from './actions/counter'
 import {bindActionCreators} from 'redux'
+import User from './components/User'
 
 class App extends Component {
   render() {
@@ -12,6 +13,7 @@ class App extends Component {
           <button onClick={() => { this.props.counterActions.increment(10) }} className="btn btn-info">increment</button>
           <button onClick={() => { this.props.counterActions.decrement(5) }} className="btn btn-success">decrement</button>
         </p>
+        <User />
       </div>
     );
   }
@@ -23,13 +25,6 @@ const mapStateToProps = (state) => {
   }
 }
 
-// const mapDispatchToProps = (dispatch) => {
-//   return {
-//     increment: () => { dispatch(increment())},
-//     decrement: () => { dispatch(decrement())}
-//   }
-// }
- 
 const mapDispatchToProps = (dispatch) => {
   return {
     counterActions:bindActionCreators(counterActions,dispatch)
