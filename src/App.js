@@ -1,14 +1,16 @@
 import React from 'react';
-import {Button} from 'antd';
-import { MessageOutlined } from '@ant-design/icons';
+import Demo1 from './components/Demo1/Parent.jsx'
+import Home from './components/Home.jsx'
+import {HashRouter,Route,Switch} from 'react-router-dom'
 
 function App() {
   return (
-    <div>
-      hello
-      <Button type="danger">按钮</Button>
-      <MessageOutlined style={{ fontSize: '16px', color: '#08c' }} />
-    </div>
+    <HashRouter>
+      <Switch>
+        <Route exact path="/" component={Home}></Route>
+        <Route exact path="/demo1" component={Demo1}></Route>
+      </Switch>
+    </HashRouter>
   );
 }
 
