@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Child from './Child';
 
 /**
  * 计数例子
@@ -47,6 +48,7 @@ export default class Parent extends Component {
         return (
             <div>
                 Parent:{this.state.count}
+                <Child num={this.state.count}/>
             </div>
         )
     }
