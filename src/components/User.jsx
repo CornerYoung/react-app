@@ -5,10 +5,18 @@ import * as userActions from '../actions/user'
 
 class User extends Component {
     render() {
-        console.log(this.props.user)
+        const {user,isFetching,error} = this.props.user
+        let data
+        if(error){
+            data = error
+        }else if(isFetching){
+            data = 'Loading...'
+        }else{
+            data = user.title
+        }
         return (
             <div className="container text-center">
-                <p className="text-center">{this.props.user.user.title ? this.props.user.user.title : 'title'}</p>
+                <p className="text-center">{data}</p>
                 <p className="text-center">User</p>
                 <button onClick={() => { this.props.userActions.get_user()}} className="btn btn-primary">点击获取</button>
             </div>
